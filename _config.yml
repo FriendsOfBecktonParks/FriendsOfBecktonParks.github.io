@@ -1,5 +1,3 @@
-title: Friends Of Beckton Parks
-description: Friends of Beckton Parks (FOBP) aims to protect, enhance, and promote Beckton Parks as a valuable green space for the community while ensuring inclusion, diversity, and equality in all its efforts.
-baseurl: "" # DO NOT set this to anything for a user/org site
-url: "https://FriendsOfBecktonParks.github.io"
-markdown: kramdown
+title: Friends of Beckton Parks
+description: Protecting and enhancing Beckton Parks for the community.
+theme: null
