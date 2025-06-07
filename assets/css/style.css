@@ -1,82 +1,37 @@
-/* style.css – responsive version for Friends of Beckton Parks */
-
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-}
-
-.wrapper {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-header, footer {
-  text-align: center;
+header {
+  text-align: center;           /* Center all header content */
   margin-bottom: 2rem;
 }
 
-/* Responsive logo */
 .logo {
-  width: 120px;
-  max-width: 50%;
+  width: 120px;                 /* Normal website logo size */
   height: auto;
-  margin: 1rem auto 0.5rem auto;
+  margin: 0 auto 0.5rem auto;   /* Center horizontally and add bottom margin */
   display: block;
 }
 
-/* Title */
 h1 {
   color: #3b6c64;
-  margin: 0.5rem 0;
-}
-
-/* Headings */
-h2, h3 {
-  color: #3b6c64;
-}
-
-/* Links */
-a {
-  color: #3b6c64;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-section {
-  margin-top: 2rem;
-}
-
-/* Responsive Navbar */
-.navbar {
+  margin: 0 0 1rem 0;           /* Space below title */
+  font-weight: 700;
+  font-size: 2rem;
   text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;      /* Center the menu items horizontally */
+  gap: 1rem;                    /* Space between menu links */
+  margin: 0 auto;               /* Center nav block */
+  padding: 0;
+  list-style: none;
   font-weight: 500;
   font-size: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
-/* Menu items with bar separators */
 .navbar a {
   color: #3b6c64;
   text-decoration: underline;
-  padding: 0 0.5rem;
   white-space: nowrap;
 }
 
@@ -90,54 +45,19 @@ section {
   text-decoration: none;
 }
 
-/* Footer */
-.site-footer {
-  background-color: #f0fdf4;
-  padding: 2rem 1rem;
-  border-top: 1px solid #ccc;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #555;
-  text-align: left;
-}
-
-.site-footer a {
-  color: #3b6c64;
-  text-decoration: underline;
-}
-
-.footer-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: transparent;
-}
-
-.footer-table td {
-  padding: 1rem;
-}
-
-.footer-logo img {
-  max-height: 150px;
-  width: auto;
-  display: block;
-}
-
-.footer-text {
-  text-align: left;
-}
-
-/* Small screen adjustments */
+/* Mobile tweaks */
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .navbar a:not(:last-child)::after {
-    content: ""; /* Hide bar separator on mobile */
-  }
-
   .logo {
     width: 80px;
   }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar a:not(:last-child)::after {
+    content: "";
+  }
 }
+
