@@ -118,4 +118,13 @@ footer a:focus {
     font-size: 0.9rem;
   }
 }
+/* Add vertical spacing to headings and paragraphs */
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
 
