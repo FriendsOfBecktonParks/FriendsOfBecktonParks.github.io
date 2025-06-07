@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friends of Beckton Parks - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Friends of Beckton Parks Logo" class="logo" />
+    <h1 class="site-title">Friends of Beckton Parks</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="parks.html">Parks</a>
+      <a href="directory.html">Directory</a>
+      <a href="about-us.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to Friends of Beckton Parks</h2>
+      <p>Your community resource for all things Beckton parks.</p>
+    </section>
+
+    <!-- Image slider placeholder -->
+    <section id="image-slider" style="max-width:600px; margin: 2rem auto;">
+      <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1" id="slider-image" style="width:100%; border-radius:8px;" />
+      <div style="margin-top:0.5rem;">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+      </div>
+    </section>
+
+    <!-- Social media embed placeholder -->
+    <section style="margin-top: 3rem;">
+      <h3>Follow us on Social Media</h3>
+      <!-- Example Twitter embed -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Welcome to our Beckton Parks community!</p>&mdash; Friends of Beckton Parks (@BecktonParks) <a href="https://twitter.com/BecktonParks/status/123456789">January 1, 2025</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="left">
+      &copy; 2025 Friends of Beckton Parks
+    </div>
+    <div class="right">
+      Contact: <a href="mailto:contact@becktonparks.org">contact@becktonparks.org</a>
+      <a href="https://facebook.com/becktonparks" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://twitter.com/becktonparks" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://instagram.com/becktonparks" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple slider script
+    const slides = [
+      "https://via.placeholder.com/600x300?text=Slide+1",
+      "https://via.placeholder.com/600x300?text=Slide+2",
+      "https://via.placeholder.com/600x300?text=Slide+3"
+    ];
+    let currentSlide = 0;
+    const sliderImage = document.getElementById('slider-image');
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+      sliderImage.src = slides[currentSlide];
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+  </script>
+</body>
+</html>
 
